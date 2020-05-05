@@ -106,7 +106,7 @@ Copyright (c) 2016, 2020, Oracle and/or its affiliates. All rights reserved.
 Oracle is a registered trademark of Oracle Corporation and/or its affiliates.
 Other names may be trademarks of their respective owners.
 ```
-```js
+```json
 Type '\help' or '\?' for help; '\quit' to exit.
  MySQL  JS > \connect localhost:6446
 Creating a session to 'root@localhost:6446'
