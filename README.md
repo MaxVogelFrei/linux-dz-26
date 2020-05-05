@@ -19,7 +19,8 @@ docker-compose -f /vagrant/docker-compose.yml up -d
 ```
 с отключенным selinux для доступа к скрипту настройки кластера  
 
-### docker-compose.yml запускает 5 контейнеров:  
+### docker-compose
+docker-compose.yml запускает 5 контейнеров:
 #### 3 сервера MySQL
 ```yaml
   mysql-server-1:
