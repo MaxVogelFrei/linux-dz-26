@@ -19,9 +19,8 @@ docker-compose -f /vagrant/docker-compose.yml up -d
 ```
 с отключенным selinux для доступа к скрипту настройки кластера  
 
-docker-compose.yml запускает 5 контейнеров:  
-
-### 3 сервера MySQL
+###docker-compose.yml запускает 5 контейнеров:  
+#### 3 сервера MySQL
 ```yaml
   mysql-server-1:
     env_file:
@@ -36,7 +35,7 @@ docker-compose.yml запускает 5 контейнеров:
 MYSQL_ROOT_PASSWORD=OtusLinux2020
 MYSQL_ROOT_HOST=%
 ```
-### роутер MySQL
+#### роутер MySQL
 ```yaml
   mysql-router:
     env_file:
@@ -51,8 +50,8 @@ MYSQL_ROOT_HOST=%
       - mysql-shell
     restart: on-failure
 ```
-С роутера проброшен порт TCP/6446
-Роутеру передаются данные для подключения к серверу mysql
+С роутера проброшен порт TCP/6446  
+Роутеру передаются данные для подключения к серверу mysql  
 ```bash
 MYSQL_USER=root
 MYSQL_HOST=mysql-server-1
@@ -60,7 +59,7 @@ MYSQL_PORT=3306
 MYSQL_PASSWORD=OtusLinux2020
 MYSQL_INNODB_NUM_MEMBERS=3
 ```
-### контейнер для запуска js скрипта настройки кластера  
+#### контейнер для запуска js скрипта настройки кластера  
 ```yaml
   mysql-shell:
     env_file:
